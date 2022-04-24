@@ -46,8 +46,6 @@ Route::get('/kategori/edit/{id}', 'KategoriController@edit')->name('kategori.edi
 
 Route::get('/kategori/delete/{id}', 'KategoriController@destroy')->name('kategori.destroy');
 
-});
-
 //Buku
 Route::get('/buku/dataBuku', 'BukuController@dataBuku')->name('buku.dataBuku');
 
@@ -62,6 +60,7 @@ Route::post('/buku/update/{id}', 'BukuController@update')->name('buku.update');
 Route::get('/buku/edit/{id}', 'BukuController@edit')->name('buku.edit');
 
 Route::get('/buku/delete/{id}', 'BukuController@destroy')->name('buku.destroy');
+});
 
 //Anggota
 Route::group(['middleware' => ['auth']], function() {
